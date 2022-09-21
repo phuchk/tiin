@@ -28,6 +28,11 @@ public class IndexController {
     return "food";
   }
 
+  @GetMapping("/login")
+  public String login() {
+    return "login";
+  }
+
   @GetMapping("")
   public String main(Model model) {
     List<PostEntity> mList = postService.findAll();
