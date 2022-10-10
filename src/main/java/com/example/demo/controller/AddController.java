@@ -1,5 +1,7 @@
 package com.example.demo.controller;
 
+import java.sql.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +36,8 @@ public class AddController {
     public String save(@ModelAttribute(value = "post") PostEntity post,
             @ModelAttribute(value = "test") CategoryEntity category) {
         post.setCategoryEntity(category);
+        post.setDateCreate(Date.valueOf(LocalDate.now()));
+        post.setDateModified(Date.valueOf(LocalDate.now()));
         postService.addPost(post);
         return "redirect:/index";
     }

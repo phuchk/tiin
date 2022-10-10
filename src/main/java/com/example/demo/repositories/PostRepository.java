@@ -9,5 +9,4 @@ import com.example.demo.model.PostEntity;
 
 @Repository
 public interface PostRepository extends JpaRepository<PostEntity, Long> {
-//    List<PostEntity> findBycategoryEntitycategoryName(String categoryName);
 }

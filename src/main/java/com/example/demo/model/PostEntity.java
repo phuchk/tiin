@@ -14,6 +14,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.sql.Date;
+
 @NoArgsConstructor
 @Table(name = "Post")
 @Data
@@ -29,9 +31,9 @@ public class PostEntity {
     @Column(name = "short_content")
     private String sortContent;
     @Column(name = "date_create")
-    private String dateCreate;
+    private Date dateCreate;
     @Column(name = "date_modified")
-    private String dateModified;
+    private Date dateModified;
     @ManyToOne
     @JoinColumn(name = "category_id")
     private CategoryEntity categoryEntity;

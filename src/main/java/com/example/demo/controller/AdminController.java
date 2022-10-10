@@ -1,5 +1,7 @@
 package com.example.demo.controller;
 
+import java.sql.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,6 +58,7 @@ public class AdminController {
         category.setId(categoryId);
         post.setCategoryEntity(category);
         post.setId(postId);
+        post.setDateModified(Date.valueOf(LocalDate.now()));
         postService.updatePost(post);
         return "redirect:/admin";
     }

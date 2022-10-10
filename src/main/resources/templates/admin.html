@@ -92,8 +92,8 @@
                         <td>1a</td>
                         <td th:text="*{item.title}"></td>
                         <td th:text="*{item.sortContent}"></td>
-                        <td th:text="asdsa"></td>
-                        <td th:text="sadasd"></td>
+                        <td th:text="*{item.dateCreate}"></td>
+                        <td th:text="*{item.dateModified}"></td>
                         <td>
                             <form th:action="@{admin/edit/{id}(id=${item.id})}" method="get">
                                 <button th:text="sua"></button>
